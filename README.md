@@ -1,27 +1,47 @@
-# AppCreditoHipotecario
+# Crédito Hipotecario · Web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
+Frontend de una aplicación de crédito hipotecario: inicio de sesión, menú según el tipo de usuario y gestión del perfil (datos personales y cambio de contraseña).
+Consume la API de [credito-hipotecario-api](https://github.com/Jmurga16/credito-hipotecario-api) (.NET 6 con Clean Architecture).
 
-## Development server
+Proyecto de práctica (2023).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Stack
 
-## Code scaffolding
+- **Angular 13** con módulos y rutas con *lazy loading*
+- **Angular Material**
+- **TypeScript** · **RxJS**
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Qué incluye
 
-## Build
+- **Autenticación**: login, *guard* de rutas e *interceptor* HTTP para las cabeceras comunes.
+- **Layout** con menú de navegación cargado desde la API según el tipo de usuario.
+- **Perfil**: datos personales y cambio de contraseña.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Estructura
 
-## Running unit tests
+```
+src/app/
+├── core/       # Layout, menú, guard, interceptor, modelos y servicios base
+├── modules/
+│   ├── auth/   # Login
+│   ├── home/   # Inicio
+│   └── perfil/ # Datos personales y cambio de contraseña
+└── shared/     # Módulo compartido (Angular Material)
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Ejecutar en local
 
-## Running end-to-end tests
+Requiere Node.js 16 y la API corriendo.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+git clone https://github.com/Jmurga16/credito-hipotecario-web.git
+cd credito-hipotecario-web
+npm install
+npm start
+```
 
-## Further help
+La URL de la API se configura en `src/environments/`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+Desarrollado por **José Murga** · [josemurga.dev](https://josemurga.dev)
