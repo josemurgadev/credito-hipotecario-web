@@ -1,7 +1,7 @@
 # Crédito Hipotecario · Web
 
 Frontend de una aplicación de crédito hipotecario: inicio de sesión, menú según el tipo de usuario y gestión del perfil (datos personales y cambio de contraseña).
-Consume la API de [credito-hipotecario-api](https://github.com/Jmurga16/credito-hipotecario-api) (.NET 6 con Clean Architecture).
+Consume la API de [credito-hipotecario-api](https://github.com/josemurgadev/credito-hipotecario-api) (.NET 6 con Clean Architecture).
 
 Proyecto de práctica (2023).
 
@@ -34,7 +34,7 @@ src/app/
 Requiere Node.js 16 y la API corriendo.
 
 ```bash
-git clone https://github.com/Jmurga16/credito-hipotecario-web.git
+git clone https://github.com/josemurgadev/credito-hipotecario-web.git
 cd credito-hipotecario-web
 npm install
 npm start
